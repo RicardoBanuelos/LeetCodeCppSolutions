@@ -39,7 +39,7 @@ public:
 
                 // Use a while loop on the rest of the array [j + 1, N - 1]
                 // We increment LEFT pointer when sum is equal or lesser than target
-                // We decrement RIGHT pointer is greater than sum
+                // We decrement RIGHT pointer when sum is greater than target
                 while(left < right)
                 {
                     int thirdNum = nums[left];

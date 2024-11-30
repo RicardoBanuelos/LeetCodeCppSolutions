@@ -57,6 +57,7 @@ public:
         dfs(startingNode);
 
         // Convert arrangement to output
+        // Reverse we used PostOrder
         reverse(arrangement.begin(), arrangement.end());
         vector<vector<int>> output;
         for(int node : arrangement) {

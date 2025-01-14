@@ -19,13 +19,19 @@ public:
                 return nullptr;
             }
 
+            // Travel to end, return curr if N is not zero, return next if N = 0
             ListNode* next = worker(head->next);
+
+            // Decrease N every time we return
             --n;
 
+            // N will only be 0 exactly once
             if(n == 0) {
+                // Avoid this node, return its next
                 return next;
             }
 
+            // Point curr node to the next node we received from recursion
             head->next = next;
             return head;
         };
